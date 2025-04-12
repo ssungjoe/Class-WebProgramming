@@ -319,13 +319,15 @@
 - 태그에 `id`를 `"앵커이름"`지정하고, `href` 속성으로 호출을 할 때 `"#앵커이름"`으로 호출하면 된다.
 - 이렇게 하면 하이퍼링크를 통해 이동 시 `id`를 지정했던 태그의 위치로 이동된다.
 ```html
-<h4>
-      <a href="#intro">1 Introduction</a>
-</h4>
-<h5>1.1 Where does this specification fit?</h2>
-<h5>1.2 Is this HTML5?</h2>
-<h5>1.3 Background</h2>
-<h5>1.4 Audience</h2>
+<h2>Full table of contents</h2>
+<a href="#intro">1 Introduction</a>
+<ol>
+      <li>1.1 Where does this specification fit?</li>
+      <li>1.2 Is this HTML5?</li>
+      <li>1.3 Background</li>
+      <li>1.4 Audience</li>
+      <li>and more...</li>
+</ol>
 
 <hr>
 
@@ -335,12 +337,18 @@ This specification defines a big part of the web platform, in lots of detail. It
 ```
 
 > 실행결과
-> <h4><a href="#intro">1 Introduction</a></h4>
-> <h5>1.1 Where does this specification fit?</h5>
-> <h5>1.2 Is this HTML5?</h5>
-> <h5>1.3 Background</h5>
-> <h5>1.4 Audience</h5>
+> <h2>Full table of contents</h2>
+> <a href="#intro">1 Introduction</a>
+> <ol>
+>       <li>1.1 Where does this specification fit?</li>
+>       <li>1.2 Is this HTML5?</li>
+>       <li>1.3 Background</li>
+>       <li>1.4 Audience</li>
+>       <li>and more...</li>
+> </ol>
+> 
 > <hr>
+> 
 > <h3 id="intro">1 Introduction</h3>
 > <h3>1.1 Where does this specification fit?</h3>
 > This specification defines a big part of the web platform, in lots of detail. Its ......

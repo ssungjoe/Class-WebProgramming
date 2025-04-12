@@ -69,15 +69,21 @@
 > <p>This is First paragraph</p>
 > <p>This is Second paragraph</p>
 
+<br>
+
 ## 수평선
 ```html
 <hr>
 ```
 
+<br>
+
 ## 줄넘김
 ```html
 <br>
 ```
+
+<br>
 
 ## 특정 문자의 엔터티 표현
 - 주로 쓰이는 표현 3가지만 작성했음

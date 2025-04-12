@@ -336,10 +336,10 @@ This specification defines a big part of the web platform, in lots of detail. It
 
 > 실행결과
 > <h4><a href="#intro">1 Introduction</a></h4>
-> <h5>1.1 Where does this specification fit?</h2>
-> <h5>1.2 Is this HTML5?</h2>
-> <h5>1.3 Background/h2>
-> <h5>1.4 Audience</h2>
+> <h5>1.1 Where does this specification fit?</h5>
+> <h5>1.2 Is this HTML5?</h5>
+> <h5>1.3 Background</h5>
+> <h5>1.4 Audience</h5>
 > <hr>
 > <h3 id="intro">1 Introduction</h3>
 > <h3>1.1 Where does this specification fit?</h3>

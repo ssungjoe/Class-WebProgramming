@@ -285,7 +285,7 @@
   + 페이지가 출력될 윈도우 이름 지정 속성 : `target`
   + 다운로드 여부 속성 : `download`
 ```html
-<a href="http://www.naver.com">네이버</a>
+<a href="http://www.google.co.kr">구글</a>
 ```
 ```html
 <a href="http://www.naver.com" alt="네이버">
@@ -295,7 +295,7 @@
 
 > 실행결과
 > <br>
-> <a href="http://www.naver.com">네이버</a>
+> <a href="http://www.google.co.kr">구글</a>
 > <br>
 > <a href="http://www.naver.com" alt="네이버">
 >       <img src="https://github.com/ssungjoe/Class-WebProgramming/blob/main/Chapter%202/asset/2025_naver_logo.png?raw=true" width="15%">

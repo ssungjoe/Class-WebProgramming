@@ -39,13 +39,13 @@
 <h5>Example</h5>
 <h6>details in example</h6>
 ```
-- 실행결과
-<h1>Chapter 1</h1>
-<h2>1.1 HTML document</h2>
-<h3>1.1.1 Web</h3>
-<h4>1.1.1.1 Internet</h4>
-<h5>Example</h5>
-<h6>details in example</h6>
+> 실행결과
+> <h1>Chapter 1</h1>
+> <h2>1.1 HTML document</h2>
+> <h3>1.1.1 Web</h3>
+> <h4>1.1.1.1 Internet</h4>
+> <h5>Example</h5>
+> <h6>details in example</h6>
 
 <br>
 
@@ -63,9 +63,9 @@
 <p>This is First paragraph</p>
 <p>This is Second paragraph</p>
 ```
-- 실행결과
-<p>This is First paragraph</p>
-<p>This is Second paragraph</p>
+> 실행결과
+> <p>This is First paragraph</p>
+> <p>This is Second paragraph</p>
 
 ## 수평선
 ```html
@@ -94,9 +94,9 @@
 <pre>여러 개의 빈 칸은 하나로
       여러 줄은 한 줄에 붙여서 출력된다</pre>
 ```
-- 실행결과
-<pre>여러 개의 빈 칸은 하나로
-      여러 줄은 한 줄에 붙여서 출력된다</pre>
+>  실행결과
+> <pre>여러 개의 빈 칸은 하나로
+>       여러 줄은 한 줄에 붙여서 출력된다</pre>
 
 <br>
 
@@ -121,3 +121,91 @@
 - 여러 태그들을 하나의 container로 묶는 `<div></div>`
 - 텍스트의 특정 부분을 Javascript로 제어하기 위해 사용하는 `<span></span>`
 
+<br>
+
+## 메타 정보 표현
+- 웹페이지의 기본 URL 지정 : `<base>`
+```html
+<head>
+      <base href="http://www.example.com/score/">
+</head>
+```
+> 이때의 `href` 속성은 `<a></a>`로도 특정 웹페이지 URL을 표시하는데 사용 가능
+> ```html
+> <a href="math.html"></a>
+> ```
+
+- 메타 데이터 (웹페이지 제작자, 인코딩 방식, 문서내용 등등) 표현 : `<meta>`
+```html
+<meta name="author" content="ssungjoe">
+```
+```html
+<meta name="description" content="information of this website">
+```
+```html
+<meta name="keywords" content="HTML, CSS, JS">
+```
+```html
+<meta charset="UTF-8">
+```
+-  이외에도 `<link>`, `<script>`, `<style>`, `<title>` 등의 태그 존재
+
+<br>
+
+## 이미지 삽입
+- `<img>` 태그 활용
+```html
+<img src="URL(필수)"
+     alt="이미지가 없을 때 표시되는 문자열(필수)"
+     width="폭"
+     height="높이">
+```
+<br>
+
+## 리스트
+- 순서 있는 리스트 : `<ol></ol>`
+  + `type` : 마커 지정 속성 (`1`, `A`, `a`, `I`, `i` 등)
+  + `start` : 마커의 시작값 속성 (기본값 : `"value"`)
+```html
+<ol type="1" start="3"> 
+      <li>아이템1</li>
+      <li>아이템2</li>
+      <li>아이템3</li>
+</ol>
+```
+> 실행결과
+> <ol type="1" start="3">
+>       <li>아이템1</li>
+>       <li>아이템2</li>
+>       <li>아이템3</li>
+> </ol>
+
+- 순서 없는 리스트 : `<ul></ul>`
+```html
+<ul> 
+      <li>아이템1</li>
+      <li>아이템2</li>
+      <li>아이템3</li>
+</ul>
+```
+> 실행결과
+> <ul> 
+>       <li>아이템1</li>
+>       <li>아이템2</li>
+>       <li>아이템3</li>
+> </ul>
+
+- 용어 정의 리스트 : `<dl></dl>`
+  + 용어 이름 : `<dt></dt>`
+  + 용어 설명 : `<dd></dd>`
+```html
+<dl>
+      <dt>용어</dt>
+      <dd>설명</dd>
+</dl>
+```
+> 실행결과
+> <dl>
+>       <dt>용어</dt>
+>       <dd>설명</dd>
+> </dl>

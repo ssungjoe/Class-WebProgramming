@@ -209,3 +209,99 @@
 >       <dt>용어</dt>
 >       <dd>설명</dd>
 > </dl>
+
+<br>
+
+## 표 만들기
+- 기본적으로 `<table></table>` 태그를 활용해 만든다.
+  + 표 제목 : <caption></caption>`
+  + 헤딩 셀 : `<thead></thead>`
+  + 데이터 셀 : `<tbody></tbody>`
+  + 바닥 셀 : `<tfoot></tfoot>`
+  + 행 : `<tr></tr>`, 여러 개의 `<td></td>`, `<th></th>`를 포함
+  + 열(헤딩, 바닥 셀) : `<th></th>`
+  + 열(데이터 셀) : `<td></td>`
+
+- 예제
+```html
+<table>
+      <caption>표 제목</caption>
+      <thead>
+            <tr>
+                  <th>이름</th>
+                  <th>HTML</th>
+                  <th>CSS</th>
+            </tr>
+      </thead>
+      <tbody>
+            <tr>
+                  <td>Apricot</td>
+                  <td>80점</td>
+                  <td>70점</td>
+            </tr>
+            <tr>
+                  <td>Banana</td>
+                  <td>95점</td>
+                  <td>99점</td>
+            </tr>
+            <tr>
+                  <td>Cake</td>
+                  <td>40점</td>
+                  <td>61점</td>
+            </tr>
+      </tbody>
+      <tfoot>
+            <tr>
+                  <th>합계</th>
+                  <th>225점</th>
+                  <th>230점</th>
+            </tr>
+      </tfoot>
+</table>
+```
+> 실행결과
+> <table>
+>       <caption>표 제목</caption>
+>       <thead>
+>             <tr><th>이름</th><th>HTML</th><th>CSS</th></tr>
+>       </thead>
+>       <tbody>
+>             <tr><td>Apricot</td><td>80점</td><td>70점</td></tr>
+>             <tr><td>Banana</td><td>95점</td><td>99점</td></tr>
+>             <tr><td>Cake</td><td>40점</td><td>61점</td></tr>
+>       </tbody>
+>       <tfoot>
+>             <tr><th>합계</th><th>225점</th><th>230점</th></tr>
+>       </tfoot>
+> </table>
+
+- `<td></td>`에 `<img>` 태그를 활용해 이미지를 삽입할 수도 있다.
+
+<br>
+
+## 하이퍼링크
+- `<a></a>` 태그를 활용한다.
+  + 이동할 URL 또는 앵커 속성 (`"URL"`, `"#앵커이름"`) : `href`
+  + 페이지가 출력될 윈도우 이름 지정 속성 : `target`
+  + 다운로드 여부 속성 : `download`
+```html
+<a href="http://www.naver.com">네이버</a>
+```
+```html
+<a href="http://www.naver.com" alt="네이버">
+      <img src="/asset/2025_naver_logo.png">
+</a>
+```
+
+> 실행결과
+> <br>
+> <a href="http://www.naver.com">네이버</a>
+> <br>
+> <a href="http://www.naver.com" alt="네이버">
+>       <img src="/asset/2025_naver_logo.png">
+> </a>
+
+- `target` 속성 사용법
+  + `"_blank"`, `"_self"`, `"_parent"`, `"_top"`, `"윈도우 이름"`
+
+## 앵커 만들기 (id 속성)

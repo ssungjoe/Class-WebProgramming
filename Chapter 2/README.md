@@ -324,7 +324,7 @@
 </h4>
 <h5>1.1 Where does this specification fit?</h2>
 <h5>1.2 Is this HTML5?</h2>
-<h5>1.3 Background/h2>
+<h5>1.3 Background</h2>
 <h5>1.4 Audience</h2>
 
 <hr>

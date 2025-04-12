@@ -31,13 +31,13 @@ $$\text{간단히 나타내자면,} \quad \text{웹} \subset \text{인터넷}\qu
 <br>
 
 ## 웹 브라우저의 역사
-- 1990 - WorldWideWeb (Nexus)  "최초의 웹 브라우저"
-- 1993 - Mosaic (Netscape Navigator)  "최초로 일반인도 사용하기 쉬운 웹 브라우저"
+- 1990 - WorldWideWeb (Nexus)  :  "최초의 웹 브라우저"
+- 1993 - Mosaic (Netscape Navigator)  :  "최초로 일반인도 사용하기 쉬운 웹 브라우저"
 - 1995 - Internet Explorer
 - 1996 - Opera
 - 1997 - Safari
 - 1998 - Mozilla Firefox
-- 2008 - Google Chrome  "점유율 60% 이상"
+- 2008 - Google Chrome  :  "점유율 60% 이상"
 - 2015 - Microsoft Edge
 
 <br>

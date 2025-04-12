@@ -298,7 +298,7 @@
 > <a href="http://www.naver.com">네이버</a>
 > <br>
 > <a href="http://www.naver.com" alt="네이버">
->       <img src="/asset/2025_naver_logo.png">
+>       <img src="https://github.com/ssungjoe/Class-WebProgramming/blob/main/Chapter%202/asset/2025_naver_logo.png?raw=true" width="15%">
 > </a>
 
 - `target` 속성 사용법

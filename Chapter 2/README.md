@@ -1,5 +1,7 @@
 # Chapter 2. 기본 문서
 
+<br>
+
 ## 기본 구성
 - HTML5 문서 선언
 ```html
@@ -304,4 +306,83 @@
 - `target` 속성 사용법
   + `"_blank"`, `"_self"`, `"_parent"`, `"_top"`, `"윈도우 이름"`
 
+<br>
+
 ## 앵커 만들기 (id 속성)
+- 앵커란? 문서의 특정 위치
+- 태그에 `id`를 `"앵커이름"`지정하고, `href` 속성으로 호출을 할 때 `"#앵커이름"`으로 호출하면 된다.
+- 이렇게 하면 하이퍼링크를 통해 이동 시 `id`를 지정했던 태그의 위치로 이동된다.
+```html
+<h4>
+      <a href="#intro">1 Introduction</a>
+</h4>
+<h5>1.1 Where does this specification fit?</h2>
+<h5>1.2 Is this HTML5?</h2>
+<h5>1.3 Background/h2>
+<h5>1.4 Audience</h2>
+
+<hr>
+
+<h3 id="intro">1 Introduction</h3>
+<h3>1.1 Where does this specification fit?</h3>
+This specification defines a big part of the web platform, in lots of detail. Its ......
+```
+
+> 실행결과
+> <h4><a href="#intro">1 Introduction</a></h4>
+> <h5>1.1 Where does this specification fit?</h2>
+> <h5>1.2 Is this HTML5?</h2>
+> <h5>1.3 Background/h2>
+> <h5>1.4 Audience</h2>
+> <hr>
+> <h3 id="intro">1 Introduction</h3>
+> <h3>1.1 Where does this specification fit?</h3>
+> This specification defines a big part of the web platform, in lots of detail. Its ......
+
+<br>
+
+## 인라인 프레임 (웹 페이지 안에 웹 페이지)
+- `<iframe></iframe>` 태그 활용
+```html
+<iframe src="http://www.etnews.com" width="300" height="300">
+      ifram 태그를 지원하지 않는 브라우저일 시 해당 텍스트 출력
+</iframe>
+```
+
+<br>
+
+## 미디어 삽입
+- 비디오 삽입 : `<video></video>` 태그 활용
+  + 재생, 재생시간, 중단, 음소거 등의 버튼 표시 속성 : `controls`
+  + 비디오 로딩 즉시 재생 속성 : `autoplay`
+  + 반복 재생 속성 : `loop`
+  + 음소거 속성 : `muted`
+```html
+<video src="apricot.mp4" width="320" height="240" controls>
+</video>
+```
+- 재생 가능한 비디오 1개 재생하기 (빠른 순 우선)
+```html
+<video width="320" height="240" controls>
+      <source src="apricot.mp4" type="video/mp4">
+      <source src="apricot.webm" type="video/webm">
+      <source src="apricot.ogg" type="video/ogg">
+      video 태그를 지원하지 않는 브라우저일 시 해당 텍스트 출력
+</video>
+```
+- 오디오 삽입 : `<audio></audio>` 태그 활용
+  + `controls`, `autoplay`, `loop` 의 속성이 있음
+```html
+<audio src="banana.mp3" controls loop>
+</audio>
+```
+- 재생 가능한 오디오 1개 재생하기 (빠른 순 우선)
+  + `mp3`는 `source`내 `type`값이 `mpeg`임을 주의한다.
+```html
+<audio controls>
+      <source src="banana.mp3" type="audio/mpeg">
+      <source src="banana.wav" type="audio/wav">
+      <source src="banana.ogg" type="audio/ogg">
+      audio 태그를 지원하지 않는 브라우저일 시 해당 텍스트 출력
+</audio>
+```

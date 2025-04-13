@@ -404,7 +404,7 @@
 ## 숫자 입력
 - `<input type="number">` : 스핀버튼 사용
 - `<input type="range">` : 슬라이드바 사용
-```
+```html
 <form>
   <input type="number"
          min="0.0" max="10.0" step="0.5"> <br>

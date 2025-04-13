@@ -244,8 +244,8 @@
          checked>
 </form>
 ```
-- 예제
 ```html
+<!-- 예제 -->
 <form>
   Apricot <input type="checkbox" value="1"> <br>
   Banana <input type="checkbox value="2" checked> <br>
@@ -305,8 +305,8 @@
          checked>
 </form>
 ```
-- 예제
 ```html
+<!-- 예제 -->
 <form>
   Apricot <input type="checkbox" value="1"> <br>
   Banana <input type="checkbox value="2" checked> <br>
@@ -315,7 +315,7 @@
 ```
 
 - `<select></select>` : 목록 선택
-  + `multipe` 속성이 있으면 여러 항목 선택 가능
+  + `multiple` 속성이 있으면 여러 항목 선택 가능
 ```html
 <form>
   <select name="company">
@@ -339,6 +339,8 @@
   </datalist>
 </form>
 ```
+
+<br>
 
 ## 캡션 만들기
 - `<label></label>` : `<label>` 안에 있는 내용을 묶어 하나의 캡션으로 만듦

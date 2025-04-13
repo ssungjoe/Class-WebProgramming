@@ -138,6 +138,10 @@
 20% <progress value="2" max="10"></progress>
 ```
 
+> 실행결과
+> <br>
+> ![image](https://github.com/user-attachments/assets/b182086d-20fe-4ea1-8fba-e91408878a46)
+
 <br>
 
 ## 웹 폼
@@ -200,70 +204,9 @@
 - `<input type="search">` : 검색어 입력창 생성
   + 검색어 입력 시 오른쪽 끝에 x가 생성돼서 입력했던던 값을 한번에 지울 수 있다.
 
-<br>
-
-## 버튼 입력
-
-- `<button></button>` : 버튼 생성
-```html
-<form>
-  <button type="button|reset|submit"
-          name="버튼이름"
-          value="버튼에 출력되는 텍스트">
-  </button>
-  
-  <button type="button">
-    <img src="/asset/button.png" alt="이미지버튼">
-  </button>
-</form>
-```
-
-- `<input type="button">` : 꼭 `<button>` 태그를 사용하지 않아도 버튼을 만들 수 있다
-
-```html
-<form>
-  <input type="button|reset|submit|image"
-          name="버튼이름"
-          value="버튼에 출력되는 텍스트"
-          src="이미지 URL">
-  </button>
-</form>
-```
-
-<br>
-
-## 선택형 입력
-- `<input type="checkbox">` : 선택/해제 가능한 입력 방식
-  + `<input type="radio">` : 복수 선택이 안되는 체크박스
-  + `checked` 속성이 활성화돼있으면 처음부터 선택된 상태로 출력된다
-```html
-<form>
-  <input type="checkbox|radio"
-         name="요소 이름"
-         value="선택됐을 때 서버로 전송되는 값"
-         checked>
-</form>
-```
-```html
-<!-- 예제 -->
-<form>
-  Apricot <input type="checkbox" value="1"> <br>
-  Banana <input type="checkbox value="2" checked> <br>
-  Cake <input type="checkbox" value="3">
-</form>
-```
-
-- `<textarea></textarea>` : 여러 줄의 텍스트를 입력받음
-```html
-<form>
-  <textarea col="가로크기(열 개수)"
-            rows="세로크기(행 개수)"
-            name="요소이름"
-            wrap="OFF|HARD|SOFT(자동 줄바꿈)">
-      초기 출력 텍스트
-  </textarea>
-</form>
-```
+> 실행결과
+> <br>
+> ![image](https://github.com/user-attachments/assets/27183419-fe58-42ac-a4ca-a3a1a63d3a23)
 
 <br>
 
@@ -309,10 +252,14 @@
 <!-- 예제 -->
 <form>
   Apricot <input type="checkbox" value="1"> <br>
-  Banana <input type="checkbox value="2" checked> <br>
+  Banana <input type="checkbox" value="2" checked> <br>
   Cake <input type="checkbox" value="3">
 </form>
 ```
+> 실행결과
+> <br>
+> ![image](https://github.com/user-attachments/assets/7c00058a-d9b5-4d87-93da-20519bcc3421)
+
 
 - `<select></select>` : 목록 선택
   + `multiple` 속성이 있으면 여러 항목 선택 가능
@@ -325,6 +272,11 @@
   </select>
 </form>
 ```
+
+> 실행결과
+> <br>
+> ![image](https://github.com/user-attachments/assets/eae2ed98-c522-4002-9111-7e9c4f4cb07c)
+
 
 - `<datalist></datalist>` : 목록 선택
   + `<input>` 태그에 `list` 속성값으로 `<datalist>`의 `id` 속성값을 똑같이 부여하면 된다
@@ -339,6 +291,11 @@
   </datalist>
 </form>
 ```
+
+> 실행결과
+> <br>
+> ![image](https://github.com/user-attachments/assets/c3acae4c-07f8-4322-9833-be6cd188e108)
+
 
 <br>
 
@@ -376,6 +333,11 @@
 </form>
 ```
 
+> 실행결과
+> <br>
+> ![image](https://github.com/user-attachments/assets/819096a5-6c57-4758-a870-b9593a5fae7e)
+
+
 <br>
 
 ## 시간 정보 입력
@@ -399,6 +361,11 @@
 </form>
 ```
 
+> 실행결과
+> <br>
+> ![image](https://github.com/user-attachments/assets/bed1bc38-4efa-4e0c-99ef-860973306415)
+
+
 <br>
 
 ## 숫자 입력
@@ -417,6 +384,11 @@
   </datalist>
 </form>
 ```
+> 실행결과
+> <br>
+> ![image](https://github.com/user-attachments/assets/1674b9b5-46d1-4019-aa59-d162db3abab5)
+
+
 
 <br>
 
@@ -433,3 +405,8 @@
   </fieldset>
 </form>
 ```
+
+> 실행결과
+> <br>
+> ![image](https://github.com/user-attachments/assets/98f432ce-c740-4954-ae5c-aeaf46646d8c)
+

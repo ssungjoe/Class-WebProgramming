@@ -397,15 +397,6 @@
 </form>
 ```
 
-> 실행결과
-<form>
-  <input type="month" value="2025-04"> <br>
-  <input type="week" value="2025-W15"> <br>
-  <input type="date" value="2025-04-13"> <br>
-  <input type="time" value="15:00"> <br>
-  <input type="datetime-local" value="2025-04-13T13:00">
-</form>
-
 <br>
 
 ## 숫자 입력
@@ -424,19 +415,6 @@
   </datalist>
 </form>
 ```
-
-> 실행결과
-<form>
-  <input type="number"
-         min="0.0" max="10.0" step="0.5"> <br>
-  <input type="range"
-         min="20" max="80" list="tangent">
-  <datalist id="tangent">
-    <option value="30" label="1/sqrt(3)">
-    <option value="45" label="1">
-    <option value="60" label="sqrt(3)">
-  </datalist>
-</form>
 
 <br>
 

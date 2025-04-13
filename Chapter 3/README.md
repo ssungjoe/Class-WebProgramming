@@ -142,12 +142,314 @@
 
 ## 웹 폼
 - `<form></form>` : 사용자의 입력을 받기 위한 태그
+- `<form>` 안에 `<input>` 태그를 넣어 입력을 받음
 ```html
 <form action="URL"
       enctype="인코딩타입"
       method="GET|POST"
       name="폼이름"
       target="윈도우이름">
-      <input type....
+    <input type....
+</form>
+```
+
+<br>
+
+## 텍스트 입력
+- `<input type="text">` : 텍스트를 입력받음
+- `<input type="password">` : 암호를 입력받음
+```html
+<form>
+  <input type="text|password"
+         name="요소이름"
+         maxlength="최대 입력 개수"
+         size="입력창 크기(문자 개수)"
+         value="초기 텍스트">
+</form>
+```
+
+- `<textarea></textarea>` : 여러 줄의 텍스트를 입력받음
+```html
+<form>
+  <textarea col="가로크기(열 개수)"
+            rows="세로크기(행 개수)"
+            name="요소이름"
+            wrap="OFF|HARD|SOFT(자동 줄바꿈)">
+      초기 출력 텍스트
+  </textarea>
+</form>
+```
+
+- `<input type="email">` : email 주소만 입력받음 (형식 검사)
+```html
+<form>
+  <input type="email">
+  <input type="submit" value="전송">
+</form>
+```
+
+- 이외에도 `type` 속성값을 `"url"`, `"tel"` 을 사용하면 각각 URL, 전화번호만 입력받는다.
+
+- `placeholder` 속성 사용 시 입력 정보의 힌트를 알려준다
+```html
+<form>
+  <input type="email" placeholder="id@host">
+</form>
+```
+
+- `<input type="search">` : 검색어 입력창 생성
+  + 검색어 입력 시 오른쪽 끝에 x가 생성돼서 입력했던던 값을 한번에 지울 수 있다.
+
+<br>
+
+## 버튼 입력
+
+- `<button></button>` : 버튼 생성
+```html
+<form>
+  <button type="button|reset|submit"
+          name="버튼이름"
+          value="버튼에 출력되는 텍스트">
+  </button>
+  
+  <button type="button">
+    <img src="/asset/button.png" alt="이미지버튼">
+  </button>
+</form>
+```
+
+- `<input type="button">` : 꼭 `<button>` 태그를 사용하지 않아도 버튼을 만들 수 있다
+
+```html
+<form>
+  <input type="button|reset|submit|image"
+          name="버튼이름"
+          value="버튼에 출력되는 텍스트"
+          src="이미지 URL">
+  </button>
+</form>
+```
+
+<br>
+
+## 선택형 입력
+- `<input type="checkbox">` : 선택/해제 가능한 입력 방식
+  + `<input type="radio">` : 복수 선택이 안되는 체크박스
+  + `checked` 속성이 활성화돼있으면 처음부터 선택된 상태로 출력된다
+```html
+<form>
+  <input type="checkbox|radio"
+         name="요소 이름"
+         value="선택됐을 때 서버로 전송되는 값"
+         checked>
+</form>
+```
+- 예제
+```html
+<form>
+  Apricot <input type="checkbox" value="1"> <br>
+  Banana <input type="checkbox value="2" checked> <br>
+  Cake <input type="checkbox" value="3">
+</form>
+```
+
+- `<textarea></textarea>` : 여러 줄의 텍스트를 입력받음
+```html
+<form>
+  <textarea col="가로크기(열 개수)"
+            rows="세로크기(행 개수)"
+            name="요소이름"
+            wrap="OFF|HARD|SOFT(자동 줄바꿈)">
+      초기 출력 텍스트
+  </textarea>
+</form>
+```
+
+<br>
+
+## 버튼 입력
+
+- `<button></button>` : 버튼 생성
+```html
+<button type="button|reset|submit"
+        name="버튼이름"
+        value="버튼에 출력되는 텍스트">
+</button>
+
+<button type="button">
+  <img src="/asset/button.png" alt="이미지버튼">
+</button>
+```
+
+- `<input type="button">` : 꼭 `<button>` 태그를 사용하지 않아도 버튼을 만들 수 있다
+
+```html
+<input type="button|reset|submit|image"
+        name="버튼이름"
+        value="버튼에 출력되는 텍스트"
+        src="이미지 URL">
+</button>
+```
+
+<br>
+
+## 선택형 입력
+- `<input type="checkbox">` : 선택/해제 가능한 입력 방식
+  + `<input type="radio">` : 복수 선택이 안되는 체크박스
+  + `checked` 속성이 활성화돼있으면 처음부터 선택된 상태로 출력된다
+```html
+<form>
+  <input type="checkbox|radio"
+         name="요소 이름"
+         value="선택됐을 때 서버로 전송되는 값"
+         checked>
+</form>
+```
+- 예제
+```html
+<form>
+  Apricot <input type="checkbox" value="1"> <br>
+  Banana <input type="checkbox value="2" checked> <br>
+  Cake <input type="checkbox" value="3">
+</form>
+```
+
+- `<select></select>` : 목록 선택
+  + `multipe` 속성이 있으면 여러 항목 선택 가능
+```html
+<form>
+  <select name="company">
+    <option value="1">Apricot</option>
+    <option value="2">Banana</option>
+    <option value="3">Cake</option>
+  </select>
+</form>
+```
+
+- `<datalist></datalist>` : 목록 선택
+  + `<input>` 태그에 `list` 속성값으로 `<datalist>`의 `id` 속성값을 똑같이 부여하면 된다
+  + `<select>` 태그와 차이점 : `<select>` 는 목록에 있는 항목만 선택되지만 `<datalist>` 는 임의의 값을 입력 후 선택 가능
+```html
+<form>
+  <input type="text" list="company">
+  <datalist id="company">
+    <option value="Apricot">
+    <option value="Banana">
+    <option value="Cake">
+  </datalist>
+</form>
+```
+
+## 캡션 만들기
+- `<label></label>` : `<label>` 안에 있는 내용을 묶어 하나의 캡션으로 만듦
+```html
+<form>
+  <label>
+    ID : <input type="text">
+  </label>
+</form>
+```
+
+- `<label>` 바깥에 있는 폼을 연결할 수도 있다.
+  + `for` 속성값을 `<input>` 태그의 `id` 속성값과 같게 하면 된다
+```html
+<form>
+  <label for="loginID">
+    ID : 
+  </label>
+  <input type="text" id="loginID">
+</form>
+```
+
+- `type` 속성에 관계없이 사용 가능하다
+
+<br>
+
+## 색 입력
+- `<input type="color">` : `#rrggbb` 형식을 통해 색을 표현한다
+```html
+<form>
+  <input type="color" value="#FF80FF"
+         onchange="document.body.style.color=this.value">
+</form>
+```
+
+<br>
+
+## 시간 정보 입력
+- 시간 정보 속성값 정리표
+
+| 속성값         | 형식             |
+|----------------|------------------|
+|`month`         |`YYYY-MM`         |
+|`week`          |`YYYY-Wnn`        |
+|`date`          |`YYYY-MM-DD`      |
+|`time`          |`hh:mm`           |
+|`datetime-local`|`YYYY-MM-DDThh:mm`|
+
+```html
+<form>
+  <input type="month" value="2025-04"> <br>
+  <input type="week" value="2025-W15"> <br>
+  <input type="date" value="2025-04-13"> <br>
+  <input type="time" value="15:00"> <br>
+  <input type="datetime-local" value="2025-04-13T13:00">
+</form>
+```
+
+> 실행결과
+<form>
+  <input type="month" value="2025-04"> <br>
+  <input type="week" value="2025-W15"> <br>
+  <input type="date" value="2025-04-13"> <br>
+  <input type="time" value="15:00"> <br>
+  <input type="datetime-local" value="2025-04-13T13:00">
+</form>
+
+<br>
+
+## 숫자 입력
+- `<input type="number">` : 스핀버튼 사용
+- `<input type="range">` : 슬라이드바 사용
+```
+<form>
+  <input type="number"
+         min="0.0" max="10.0" step="0.5"> <br>
+  <input type="range"
+         min="20" max="80" list="tangent">
+  <datalist id="tangent">
+    <option value="30" label="1/sqrt(3)">
+    <option value="45" label="1">
+    <option value="60" label="sqrt(3)">
+  </datalist>
+</form>
+```
+
+> 실행결과
+<form>
+  <input type="number"
+         min="0.0" max="10.0" step="0.5"> <br>
+  <input type="range"
+         min="20" max="80" list="tangent">
+  <datalist id="tangent">
+    <option value="30" label="1/sqrt(3)">
+    <option value="45" label="1">
+    <option value="60" label="sqrt(3)">
+  </datalist>
+</form>
+
+<br>
+
+## 하나로 묶기 (범례)
+- `<fieldset></fieldset>` 태그를 사용하면 범례처럼 하나로 묶을 수 있다.
+  + `<fieldset>` 태그 안에 `<legend></legend>` 태그를 넣어 범례의 제목을 정할 수 있다.
+```html
+<form>
+  <fieldset>
+    <legend>제목</legend>
+    Email : <input type="email"> <br>
+    Homepage : <input type="url"> <br>
+    Tel : <input type="tel">
+  </fieldset>
 </form>
 ```

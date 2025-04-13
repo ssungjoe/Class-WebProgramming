@@ -59,6 +59,9 @@
           <p>그러나 r에 대한 해는 위처럼 정해져서 나오는 것이 아닌 아주 다양한 조합으로 나타난다. 이 때는 서로 다른 실근, 중복되는 근, 복소근을 각각 나눠서 위의 공식을 적용 후 더해서 합치면 일반해를 구할 수 있다.</p>
         </aside>
       </section>
+      <footer>
+        <p>2025.4.13 작성, Advanced Engineering Mathematics 7th edition, Dennis G. Zill</p>
+      </footer>
   </body>
 </html>
 ```
@@ -94,3 +97,57 @@
 >           <p>그러나 r에 대한 해는 위처럼 정해져서 나오는 것이 아닌 아주 다양한 조합으로 나타난다. 이 때는 서로 다른 실근, 중복되는 근, 복소근을 각각 나눠서 위의 공식을 적용 후 더해서 합치면 일반해를 구할 수 있다.</p>
 >        </aside>
 >       </section>
+>       <footer>
+>         <p>2025.4.13 작성, Advanced Engineering Mathematics 7th edition, Dennis G. Zill</p>
+>       </footer>
+
+<br>
+
+## 시멘틱 블록 태그
+- `<figure></figure>` : 본문에 삽입된 그림, 영상, 소스코드 등을 하나로 블록화하는 태그
+- `<details></details>` : 상세정보를 담는 태그, 접었다 펼쳤다하는 이점이 있음
+  + `<details>` 의 제목을 표현할 때 안에 `<summary></summary>` 태그를 넣는다.
+ 
+```html
+<details>
+  <summary>제목</summary>
+  <p>내용</p>
+</details>
+```
+
+> 실행결과
+> <details>
+>   <summary>제목</summary>
+>   <p>내용</p>
+> </details>
+
+<br>
+
+## 시멘틱 인라인 태그
+- `<mark></mark>` : 텍스트 하이라이트
+- `<time></time>` : 시간 정보를 나타낼 때 사용
+```html
+점심시간 <time>13:00</time>
+```
+- `<meter></meter>` : 데이터 양 표시 (% 또는 범위)
+```html
+<meter value="0.8" max="1.0">80%</meter>
+```
+- `<progress></progress>` : 진행 정도 표시
+```html
+20% <progress value="2" max="10"></progress>
+```
+
+<br>
+
+## 웹 폼
+- `<form></form>` : 사용자의 입력을 받기 위한 태그
+```html
+<form action="URL"
+      enctype="인코딩타입"
+      method="GET|POST"
+      name="폼이름"
+      target="윈도우이름">
+      <input type....
+</form>
+```

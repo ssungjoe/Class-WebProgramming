@@ -183,3 +183,177 @@ ul strong { background : yellow; }
 > 실행결과
 > <br>
 > ![image](https://github.com/user-attachments/assets/8dc64119-0e5b-4b5b-ae3f-cdb0f523c7c6)
+
+<br>
+
+## 색 사용
+
+- 16진수 코드 `#rrggbb` 사용
+```css
+div { color : #8A2BE2; }
+```
+- r, g, b 각 성분을 10진수로 표현
+```css
+div { color : rgb(130, 43, 226); }
+```
+- 색 이름 사용
+```css
+div { color : blueviolet; }
+```
+- 색 관련 속성
+  + `color` : 텍스트 색
+  + `background-color` : 배경 색
+  + `border-color` : 테두리 색
+
+<br>
+
+## 텍스트 꾸미기
+- 들여쓰기
+  + `text-indent` : `3em`, `10%`, ...
+- 글자 정렬
+  + `text-align` : `left`, `right`, `center`, `justify`(양쪽정렬)
+- 텍스트 꾸미기
+  + `text-decoration` : `none`, `underline`, `overline`, `line-through`
+  + `none`을 활용해서 `<a>`태그에서 하이퍼링크 밑줄 안나오게 할 수 있음
+ 
+<br>
+
+## 표준 단위
+|단위 |뜻                   |
+|-----|--------------------|
+|`em` |폰트의 n배           |
+|`%`  |폰트의 n%            |
+|`px` |n픽셀 크기           |
+|`cm` |n센티미터            |
+|`mm` |n밀리미터            |
+|`in` |n인치                |
+|`pt` |n포인트              |
+|`pc` |n피카소(1`pc`=12`pt`)|
+|`deg`|각도 n도             |
+
+<br>
+
+## 폰트
+- 사용할 폰트 선언
+  + `font-family` : `Arial`, `"Times New Roman"`, `Serif`
+  + `Arial`을 우선적으로 사용, 없으면 `"Times New Roman"` 사용, 없으면 `Serif` 사용
+  + 이름에 공백이 있는 경우 입력할 때 `""`를 사용한다
+- 폰트 크기
+  + `font-size` : `40px`, `medium`, `1.6em`, ...
+- 폰트 스타일
+  + `font-style` : `normal`, `italic`(필기체), `oblique`(기울임체)
+- 폰트 굵기
+  + `font-weight` : `300`(100 ~ 900), `normal`(400), `bold`(700)
+- 단축 속성 `font`
+  + 폰트 스타일, 굵기, 크기, 폰트 종류를 한번에 선언 가능
+  + 크기, 종류는 필수 항목
+  ```css
+  div { font : italic bold 20px consolas, sans-serif; }
+  ```
+  ```css
+  div { font : 20px consolas, sans-serif; }  /* 필수 항목 */
+  ```
+
+<br>
+
+## 박스 모델
+- 콘텐츠 : 태그 내부 텍스트 또는 이미지
+- `padding` : 콘텐츠를 둘러싸고 있는 내부 여백
+  + 패딩은 색 없음, 크기만 조절
+- `border` : `padding` 외부의 테두리
+  + 두께, 색, 테두리 모양 등 조절 가능
+- `margin` : 바깥 영역의 영역
+  + 마진은 색 없음, 크기만 조절
+
+<br>
+
+![image](https://github.com/user-attachments/assets/514495be-5274-4670-843e-2adb7f7a1fa4)
+
+- 당연히 CSS로 박스 제어 가능
+```css
+div {
+  width: 150px;
+  height: 50px;
+  /* 패딩, 보더, 마진 제어 */
+  margin: 40px;
+  border-width: 30px;
+  padding: 20px;
+}
+```
+<br>
+
+## 테두리(border) 꾸미기
+- `border`의 속성들
+  + `border-width` : `3px`, `medium`, ...
+  + `border-style` : `none`, `hidden`, `dotted`, `solid`, `double`, ...
+  + `border-color` : `blue`, ...
+- 특정한 방향에 대해서만 제어 가능
+  + `border-left-width` : `3px`, ...
+  + `border-left-style` : `dotted`, ...
+  + `border-left-color` : `blue`, ...
+- 단축 속성 `border`
+  ```css
+  div { font : 3px dotted blue; }
+  ```
+- 둥근 모서리 `border`
+  + 모든 방향 둥글게 : `border-radius: 50px`
+  + 특정 방향 둥글게 : `border-radius: 0px 20px 40px 60px` (아래 사진에서 1, 2, 3 ,4번 순으로 적용됨)
+<br>
+
+![image](https://github.com/user-attachments/assets/eb227d81-46ae-4900-af9a-72168192814c)
+
+- 테두리를 특정 이미지로 만들기
+  + (주의) `border-width`가 `0`이면 당연히 이미지가 안보이고, `border-style`을 `soild`로 지정해줘야 한다
+  + `border-image: url("path/image.png") 30 round`
+  + `30`: `30px` 만큼 이미지 모서리를 떼서 `border`의 모서리에 배치
+  + `round` : `border`의 edge부분 이미지 반복
+
+<br>
+
+## 배경
+- 배경 채우기
+  + `background-color` : `skyblue`, ...
+  + `background-image` : `url("path/image.png")`
+- 배경 이미지 조정(위치, 크기, 반복여부)
+  + `background-position` : `left top`(기본), `center center`, ... (`left/center/right` `top/center/bottom` 원하는 대로 조합)
+  + `background-size` : `100px 100px`
+  + `background-repeat` : `repeat`(기본), `no-repeat`, `repeat-x`, `repeat-y`
+- 단축 속성 `background`
+```css
+div { background : skyblue url("path/image.png") center center/100px 100px repeat-y; }
+```
+
+<br>
+
+## 그림자
+- 텍스트 그림자 `text-shadow : (h-shadow) (v-shadow) (blur-radius) (color)`
+  + `h-shadow`(필수) : `3px` (텍스트, 그림자 수평거리)
+  + `v-shadow`(필수) : `3px` (텍스트, 그림자 수직거리)
+  + `blur-radius` : `5px` (그림자 번짐 정도)
+  + `color` : `red` (색지정)
+```css
+div#shadow { text-shadow : 3px 3px red; }
+div#blur { text-shadow : 3px 3px 5px red; }  /* 번짐 추가 */
+div#multiple { text-shadow : 3px 3px 5px black,
+                             0px 0px 25px blue,
+                             0px 0px 5px darkblue; }  /* 여러 효과 동시 적용 가능 */
+```
+- 박스모델 그림자 `box-shadow : (h-shadow) (v-shadow) (blur-radius) (spread-radius) (color)`
+  + 텍스트 그림자와 이름 같은 속성은 동일한 기능
+  + `spread-radius` : 그림자 크기
+```css
+div#shadow { box-shadow : 10px 10px red; }
+div#blur { box-shadow : 10px 10px 5px red; }  /* 번짐 추가 */
+div#multiple { box-shadow : 3px 3px 5px black,
+                            0px 0px 25px blue,
+                            0px 0px 5px darkblue; }  /* 여러 효과 동시 적용 가능 */
+```
+
+<br>
+
+## 마우스 커서 모양
+- `cursor` (지정한 태그 위에 마우스를 올릴 때의 커서모양 지정)
+  + 지정할 수 있는 종류는 아래와 같다
+<br>
+
+![image](https://github.com/user-attachments/assets/d2c64eb7-514a-4fdc-8a22-1c9b524e8f46)

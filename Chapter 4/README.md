@@ -352,7 +352,7 @@ div#multiple { box-shadow : 3px 3px 5px black,
 <br>
 
 ## 마우스 커서 모양
-- `cursor` (지정한 태그 위에 마우스를 올릴 때의 커서모양 지정)
+- `cursor : wait` (지정한 태그 위에 마우스를 올릴 때의 커서모양 지정)
   + 지정할 수 있는 종류는 아래와 같다
 <br>
 

@@ -2,16 +2,16 @@
 
 <br>
 
-## 배치
-- CSS 프로퍼티 종류
-  + `display`
-  + `position`
-  + `left`, `right`, `top`, `bottom`
-  + `float`
-  + `z-index`
-  + `visibility`
-  + `overflow`
+## CSS 프로퍼티 종류
++ `display`
++ `position`
++ `left`, `right`, `top`, `bottom`
++ `float`
++ `z-index`
++ `visibility`
++ `overflow`
 <br>
+
 ## 블록, 인라인 박스
 - `display` : `block`, `inline`, `inline-block`
   + `block` : 한 줄을 독점적으로 차지, 크기 조절 가능
@@ -62,7 +62,7 @@
 ```
 
 <img src="https://github.com/user-attachments/assets/7af39fcb-5f8a-4470-91b7-6570b7c015c5" width="80%" />
-<br>
+<br><br>
 
 - `float` : `left`, `right`
   + 태그를 항상 오른편이나 왼편에 배치할 수 있음
@@ -74,11 +74,10 @@
   margin: 1em;
 }
 ```
-<br>
 
 <img src="https://github.com/user-attachments/assets/07187459-4cca-4b64-a24c-9de776ee44cb" width="30%" />
 
-<br>
+<br><br>
 
 ## 수직방향 우선도
 - `z-index` : `-3`, `2`, ... (높은 순으로 위쪽 위치)

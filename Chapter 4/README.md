@@ -293,7 +293,7 @@ div {
   + `border-left-color` : `blue`, ...
 - 단축 속성 `border`
   ```css
-  div { font : 3px dotted blue; }
+  div { border: 3px dotted blue; }
   ```
 - 둥근 모서리 `border`
   + 모든 방향 둥글게 : `border-radius: 50px`

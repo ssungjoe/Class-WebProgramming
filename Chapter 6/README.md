@@ -29,16 +29,95 @@
 ```
 - `<script></script>` 태그에 자바스크립트 코드 작성
 ```javascript
-<script>
 function over(obj) {
   obj.src = "media/banana.png";
 }
 function out(obj) {
   obj.src = "media/apple.png";
 }
-</script>
 ```
 `...`
 ```html
 <img src="media/apple.png" alt="img" onmouseover="over(this)" onmouseout="out(this)">
+```
+- 자바스크립트 코드를 별도 파일에 작성
+```html
+<script src="filename.js"></script>
+```
+- URL 부분에 자바스크립트 코드 작성
+```html
+<a href="javascript:alert('clicked!')">여기를 클릭</a>
+```
+<br>
+
+## JS로 HTML 콘텐츠 출력
+- `document.write()`, `document.writeln()`
+```javascript
+document.write("<h3>INNER TEXT</h3>");
+```
+<br>
+
+## 다이얼로그
+- `prompt()` : 사용자로부터 다이얼로그를 통해 문자열 입력받음
+```javascript
+let res = prompt("이름을 입력", "SJ");
+if (res == null) {
+  // 취소하거나 닫은 경우
+}
+else if (res = "") {
+  // 입력없이 확인만 누른 경우
+}
+else {
+  // res는 사용자가 입력한 문자열
+}
+```
+- `confirm()` : 다이얼로그로 확인/취소를 선택하도록 함
+```javascript
+let res = confirm("전송하시겠습니까?");
+if (res == true) {
+  // 확인을 누른 경우
+}
+else {
+  // 취소하거나 닫은 경우
+}
+```
+- `alert()` : 경고 다이얼로그, 확인버튼만 있음
+```javascript
+alert("클릭하였습니다);
+```
+<br>
+
+## 데이터 타입
+- 식별자 : 변수, 상수, 함수에 붙이는 이름
+  + 첫 글자 : 알파벳, _, $
+  + 이후 글자 : 알파벳, _, 0-9, $
+  + 대소문자 구분, 예약어 사용불가
+- 문장구분 : `;` 사용, 한 줄에 한 문장만 있으면 생략 가능
+- 주석문 : 한 줄은 `// text`, 여러 줄은 `/*  text  */` 사용
+- 데이터 타입 종류
+  + 숫자 : `123`, `-456`, `3.14`
+  + 논리 : `true`, `false`
+  + 문자열 : `"string1"`, `'String2'`
+  + 객체 레퍼런스 : `[object Object]`
+  + `null` : 값이 없음을 인위적으로 나타냄
+
+<br>
+
+## 변수
+- 선언 방법
+  + `var`, `let`, `const`
+  + `let`은 2015년 ES6에서 새로 추가됨, 동일한 변수 재선언 불가
+- 사용 범위
+  + 전역 변수 : 함수 밖에서 선언되거나, `var`, `let` 없이 선언된 변수
+  + 지역 변수 : 함수 내에서 `var`, `let`으로 선언된 변수, 함수 종료 시 사라짐
+  + 블록 변수 : `let`으로 `if`, `while`, `for` 등의 블록 안에서 선언된 변수, 블록이 끝나면 사라짐
+- `this`로 전역 변수 접근
+  + 블록 내에서 같은 이름으로 변수가 선언되었다고 해도 `this.x`처럼 `this`를 사용하면 전역변수에 접근 가능하다
+```javascript
+var x = 10; // 전역변수
+function foo() {
+  var x; // 지역변수
+  x = 1;
+  this.x = 100; // 전역변수 x에 100 저장
+}
 ```
